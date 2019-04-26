@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/static/website.css"/>
+  </head>
+  <body>
+  <h1> Joke Form </h1>
+  <h4>
+  Joke Box:
+  <form method="post" action="save_joke">
+  Setup: <input type="text" name="fav_joke" />
+  Punchline: <input type="text" name="end_joke" />
+  <input type="submit" />
+  </form>
+  </h4>
+  <div class='post'>
+  {% for fav_joke in fav_joke %}
+  <p>
+  <b>{{fav_joke['username']}}:</b> {{ fav_joke['message'] }}
+  </p>
+  <p>
+  {{ fav_joke['end'] }}
+  </p>
+  {% endfor %}
+  </div>
+  <br>
+  <div class='extra'>
+    <table>
+    <tr>
+      <th>Joke room</th> <th> Funny pic</th> <th> Chat room </th>
+    </tr>
+    <tr>
+      <td><a href='/'>Link<a></td>
+      <td><a href="/picturesharing">Link</a></td>
+      <td><a href="/chat_room">Link</a></td>
+    </tr>
+  </table>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<h2>Picture:</h2>
+<form method="post" action="save_chat">
+<input type="text" name="fav_chat" />
+<input type="submit" />
+</form>
+<head>
+<link rel="stylesheet" type="text/css" href="/static/website.css"/>
+</head>
+<body>
+<h1>Message board:</h1>
+{% for fav_chat in fav_chat %}
+<h3>
+Message:
+</h3>
+<img src={{fav_chat}} width="100px"/>
+{% endfor %}
+</body>

@@ -1,0 +1,23 @@
+<head>
+
+</head>
+
+<h3>Your profile is: </h3>
+
+<img src={{url}} width="100px"/>
+
+
+<h1>
+What is your favourite food?
+</h1>
+<form method="post" action="save_food">
+<input type="text" name="fav_food" />
+<input type="submit" />
+</form>
+
+<h1>Current foods:</h1>
+{% for fav_food in fav_foods %}
+<h3>
+{{ fav_food }}
+</h3>
+{% endfor %}

@@ -1,0 +1,22 @@
+<h1>Picture:</h1>
+
+<head>
+<link rel="stylesheet" type="text/css" href="/static/website.css"/>
+</head>
+<body>
+<h4>Message board: <form method="post" action="save_chat">
+  <input type="text" name="url" />
+  <input type="submit" />
+  </form>
+</h4>
+<div class="post">
+
+{% for fav_pic in fav_pics %}
+
+<p>
+<b>{{fav_pic['username']}}:</b>
+</p>
+<img src="{{fav_pic['url']}}" width="300px"/>
+{% endfor %}
+</div>
+</body>

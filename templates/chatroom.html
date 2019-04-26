@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" type="text/css" href="/static/website.css"/>
+  </head>
+  <body>
+  <h1>Message board:</h1>
+  <h4>
+  Message:
+  <form method="post" action="save_chit">
+  <input type="text" name="fav_chit" />
+  <input type="submit" />
+  </form>
+  </h4>
+  <div class='post'>
+  {% for fav_chit in fav_chits %}
+  <p>
+  <b> {{fav_chit['username']}}</b> : {{ fav_chit['message']}}
+  </p>
+  {% endfor %}
+  </div>
+  <br>
+  <div class='extra'>
+  <a href="/picturesharing"> Funny Pics </a>
+  <a href="/chat_room"> Chat Room </a>
+  </div>
+  </body>
+  </html>
